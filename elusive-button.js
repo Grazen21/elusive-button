@@ -22,19 +22,17 @@ hover = () => {
             hoverCount += 1;
         } 
         else {
-            let x= 100;
-            let y= 100;
-            while (x> 90) {
-                x= Math.floor(Math.random()*100);
+            let x= -1;
+            let y= -1;
+            while (x< 0) {
+                x= Math.floor(Math.random()* window.innerWidth)- 100;
             };
-            while (y> 30) {
-                y= Math.floor(Math.random()*100);
+            while (y< 0) {
+                y= Math.floor(Math.random()* window.innerHeight)- 200;
             };
-            // x= Math.floor(Math.random()*100);
-            // y= Math.floor(Math.random()*100);
             document.getElementById("p").innerHTML += " Ha";
-            document.getElementById("button").style.marginLeft=  x + "%";
-            document.getElementById("button").style.marginTop= y + "%";
+            document.getElementById("button").style.marginLeft=  x+ "px";
+            document.getElementById("button").style.marginTop= y+ "px";
             hoverCount += 1;
         }
 }
